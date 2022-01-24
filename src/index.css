@@ -6,6 +6,16 @@ body {
   background: #010920;
 }
 
+.layout-Day {
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+
+.layout-Night {
+  background: #010920;
+}
+
 .todo.completed span {
   text-decoration: line-through;
 }
@@ -96,6 +106,18 @@ h1 {
 .button:hover {
   background: #d95133;
   cursor: pointer;
+}
+
+.button-theme {
+  border-radius: 15px;
+  margin-top: 150px;
+  font: 20px "Lobster Two";
+}
+
+.button-theme:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px grey;
 }
 
 .subtitle {
