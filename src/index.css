@@ -1,0 +1,123 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #010920;
+}
+
+.todo.completed span {
+  text-decoration: line-through;
+}
+
+.todo label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem 0;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+}
+
+.todo label:hover {
+  color: #ff8469;
+}
+
+.todo i {
+  z-index: 2;
+}
+
+.title__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  color: white;
+  max-width: 480px;
+  background-color: #252e42;
+  border-radius: 20px;
+  padding: 70px 60px;
+  margin-top: 121px;
+}
+
+ul {
+  gap: 20px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin-top: 59px;
+    padding: 70px 43px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  background: #ff8469;
+  border-radius: 7px;
+  border: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.button:hover {
+  background: #d95133;
+  cursor: pointer;
+}
+
+.subtitle {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4f5565;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
