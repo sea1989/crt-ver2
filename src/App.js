@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import AddTask from './Add-task';
 import TodoList from './TodoList'
 
+import Button from "./Button";
+import { ThemeContextConsumer } from "./themeContext";
+
 export default function App() {
 
   const [todos, setTodos] = useState([]);
@@ -45,14 +48,27 @@ export default function App() {
   };
 
   return (
-    <div className="container">
+    <ThemeContextConsumer>
+      {context => (
+        <div className={`layout-${context.theme}`}>
 
-      <header className='header'>
-        <h1>Todo list</h1>
-      </header>
+          <Button />
 
-      <AddTask addTask={addTask} />
-      <TodoList changeComplete={changeComplete} todos={todos} onRemove={removeTask} />
-    </div>
+          <div className="container">
+
+            <header className='header'>
+              <h1>Todo list</h1>
+            </header>
+
+            <AddTask addTask={addTask} />
+            <TodoList changeComplete={changeComplete} todos={todos} onRemove={removeTask} />
+          </div>
+
+        </div>
+      )}
+    </ThemeContextConsumer>
   );
+
 }
+
+App.contextType = ThemeContextConsumer;
