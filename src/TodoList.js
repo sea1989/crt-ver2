@@ -1,7 +1,8 @@
 import React from 'react'
 import TodoItem from './TodoItem'
+import WithLoader from './WithLoader';
 
-export default function TodoList({ todos, changeComplete, onRemove }) {
+function TodoList({ todos, changeComplete, onRemove }) {
 
   const changeDone = (id) => {
     changeComplete(id);
@@ -13,3 +14,5 @@ export default function TodoList({ todos, changeComplete, onRemove }) {
     </ul>
   )
 }
+
+export default WithLoader(TodoList);

@@ -65,6 +65,11 @@ li {
   align-items: center;
 }
 
+.add-task__form {
+  display: flex;
+  gap: 32px;
+}
+
 @media (max-width: 768px) {
   .container {
     width: 100%;

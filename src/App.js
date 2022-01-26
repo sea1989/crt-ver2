@@ -5,7 +5,11 @@ import TodoList from './TodoList'
 import Button from "./Button";
 import { ThemeContextConsumer } from "./themeContext";
 
+
+
 export default function App() {
+
+  const [isLoad, setIsLoad] = useState(true);
 
   const [todos, setTodos] = useState([]);
 
@@ -61,7 +65,12 @@ export default function App() {
             </header>
 
             <AddTask addTask={addTask} />
-            <TodoList changeComplete={changeComplete} todos={todos} onRemove={removeTask} />
+
+            <button onClick={() => setIsLoad(false)}>Загрузить</button>
+
+
+            <TodoList changeComplete={changeComplete} todos={todos} onRemove={removeTask} isLoad={isLoad} />
+
           </div>
 
         </div>
