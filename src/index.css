@@ -1,5 +1,9 @@
 @import "~materialize-css/dist/css/materialize.min.css";
 
+h1 {
+  color: aqua;
+}
+
 body {
   margin: 0;
   padding: 0;

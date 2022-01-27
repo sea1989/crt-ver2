@@ -7,8 +7,13 @@ import App from './App';
 import 'materialize-css'
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<ThemeContextProvider>
+ReactDOM.render(
+
+
+<ThemeContextProvider>
     <App />
-</ThemeContextProvider>, document.getElementById('root'));
+</ThemeContextProvider>, document.getElementById('root')
+
+);
 
 serviceWorker.unregister();
