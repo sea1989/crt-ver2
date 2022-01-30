@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types';
+
 
 export default function TodoItem({ title, id, completed, subtitle, onChange, onRemove }) {
 
@@ -36,4 +38,9 @@ export default function TodoItem({ title, id, completed, subtitle, onChange, onR
       <button onClick={handleRemove} className='button button__add'>del</button>
     </li>
   )
+}
+
+TodoItem.prototype = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string
 }

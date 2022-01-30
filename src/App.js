@@ -66,8 +66,7 @@ export default function App() {
 
             <AddTask addTask={addTask} />
 
-            <button onClick={() => setIsLoad(false)}>Загрузить</button>
-
+            <button className='button__danger' onClick={() => setIsLoad(false)}>Загрузить</button>
 
             <TodoList changeComplete={changeComplete} todos={todos} onRemove={removeTask} isLoad={isLoad} />
 
